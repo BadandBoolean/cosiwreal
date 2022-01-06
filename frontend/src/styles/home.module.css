@@ -1,0 +1,34 @@
+.containerWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.containerStyle {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.introStyle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blockBasic {
+  border-radius: 30px;
+  height: 200px;
+  width: 200px;
+  color: white;
+  flex-basis: 20%;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

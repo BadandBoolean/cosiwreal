@@ -1,0 +1,86 @@
+.serverFirst {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 6;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  border: 3px solid #266dd3;
+  background: white;
+}
+
+.serverSecond {
+  position: absolute;
+  z-index: 4;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  border: 3px solid green;
+  background: white;
+  cursor: pointer;
+}
+
+.serverThird {
+  position: absolute;
+  z-index: 3;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  border: 3px solid red;
+  background: white;
+  cursor: pointer;
+}
+
+.serverFourth {
+  position: absolute;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  border: 3px solid purple;
+  background: white;
+  cursor: pointer;
+}
+
+.standard {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 80vh;
+}
+
+.glow {
+  position: absolute;
+  z-index: 5;
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(90deg, #ffa0ae 0%, #aacaef 75%);
+  -webkit-filter: blur(20px);
+  filter: blur(15px);
+}
+
+.underlineanim {
+  display: inline-block;
+  position: relative;
+}
+
+.underlineanim:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ec058e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underlineanim:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

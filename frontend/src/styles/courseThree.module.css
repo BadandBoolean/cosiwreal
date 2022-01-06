@@ -1,0 +1,42 @@
+.startButton {
+  border: 1px solid #e47a77;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #e47a77;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  width: 5%;
+  height: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.floatingReq {
+  border: 1px solid #7abfdf;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #7abfdf;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.underlineanim:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ec058e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underlineanim:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

@@ -1,0 +1,35 @@
+.mainClient {
+  background: #ec058e;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underlineanim {
+  display: inline-block;
+  position: relative;
+}
+
+.underlineanim:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ec058e;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underlineanim:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

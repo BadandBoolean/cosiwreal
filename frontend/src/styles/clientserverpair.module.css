@@ -1,0 +1,45 @@
+.mainBox {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.mainBoxtwo {
+  display: flex;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.shapeclient {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: #ec058e;
+}
+
+.shapeserver {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+
+  background: #266dd3;
+}
+.shapeContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 25%;
+}
+
+.shapeWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.labels {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}

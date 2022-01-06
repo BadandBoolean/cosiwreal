@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 
 import { useState } from 'react';
 import { SessionProvider } from "next-auth/react"

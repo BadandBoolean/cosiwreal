@@ -27,6 +27,7 @@ export default function QuizOneB() {
         if (!answerGiven) {
             if ((quizAnswer == "The client runs locally on the user's machine")) {
                 setAnswerGiven(true);
+                if (!!session) {
                 const response = await fetch('../api/incrementScore', {
                 method: 'POST',
                 body: JSON.stringify({"question": 2, "userEmail": session.user.email}),
@@ -34,6 +35,7 @@ export default function QuizOneB() {
                     'Content-Type': 'application/json'
                 }
                 })
+            }
                 
                 setAnswerResult("correct");
             }
@@ -45,6 +47,7 @@ export default function QuizOneB() {
 
     const updateProgress = async (e) => {
         e.preventDefault();
+        if (!!session) {
         const response = await fetch('../api/updateProg', {
           method: 'POST',
           body: JSON.stringify({"courseNum": 1, "color": "#169873", "userEmail": session.user.email }),
@@ -53,6 +56,7 @@ export default function QuizOneB() {
           }
         })
         const data = await response.json()
+    }
     };
 
     const title = 'Client-Server Interaction: client and server - what are they?'

@@ -28,6 +28,7 @@ export default function QuizOneA() {
         if (!answerGiven) {
             if ((quizAnswer == "A stylesheet (CSS)")) {
                 setAnswerGiven(true);
+                if (!!session) {
                 const response = await fetch('../api/incrementScore', {
                 method: 'POST',
                 body: JSON.stringify({"question": 1, "userEmail": session.user.email}),
@@ -35,6 +36,7 @@ export default function QuizOneA() {
                     'Content-Type': 'application/json'
                 }
                 })
+                }
                 setAnswerResult("correct");
             }
             else {

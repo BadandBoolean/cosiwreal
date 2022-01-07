@@ -27,6 +27,7 @@ export default function QuizTwoA({ makeUpdateScore }) {
         if (!answerGiven) {
             if ((quizAnswer == "Hostname and Port")) {
                 setAnswerGiven(true);
+                if (!!session) {
                 const response = await fetch('../api/incrementScore', {
                 method: 'POST',
                 body: JSON.stringify({"question": 5, "userEmail": session.user.email}),
@@ -34,6 +35,7 @@ export default function QuizTwoA({ makeUpdateScore }) {
                     'Content-Type': 'application/json'
                 }
                 })
+            }
                 setAnswerResult("correct");
             }
             else {

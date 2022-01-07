@@ -27,6 +27,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
         if (!answerGiven) {
             if ((quizAnswer == "Username and password information given as part of a submitted form")) {
                 setAnswerGiven(true);
+                if (!!session) {
                 const response = await fetch('../api/incrementScore', {
                 method: 'POST',
                 body: JSON.stringify({"question": 4, "userEmail": session.user.email}),
@@ -34,6 +35,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
                     'Content-Type': 'application/json'
                 }
                 })
+            }
                 
                 setAnswerResult("correct");
             }
@@ -45,6 +47,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
 
     const updateProgress = async (e) => {
         e.preventDefault();
+        if (!!session) {
         const response = await fetch('../api/updateProg', {
           method: 'POST',
           body: JSON.stringify({"courseNum": 2, "color": "#169873", "userEmail": session.user.email }),
@@ -53,6 +56,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
           }
         })
         const data = await response.json()
+    }
     };
 
     const title = 'Client-Server Interaction: how do they communicate?'

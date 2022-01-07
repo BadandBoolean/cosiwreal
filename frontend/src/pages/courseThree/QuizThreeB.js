@@ -27,6 +27,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
         if (!answerGiven) {
             if ((quizAnswer == "JSON data")) {
                 setAnswerGiven(true);
+                if (!!session) {
                 const response = await fetch('../api/incrementScore', {
                 method: 'POST',
                 body: JSON.stringify({"question": 6, "userEmail": session.user.email}),
@@ -34,7 +35,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
                     'Content-Type': 'application/json'
                 }
                 })
-                
+            }
                 setAnswerResult("correct");
             }
             else {
@@ -45,6 +46,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
 
     const updateProgress = async (e) => {
         e.preventDefault();
+        if (!!session) {
         const response = await fetch('../api/updateProg', {
           method: 'POST',
           body: JSON.stringify({"courseNum": 3, "color": "#169873", "userEmail": session.user.email }),
@@ -53,6 +55,7 @@ export default function QuizTwoB({ makeUpdateScore, setCourseTwoColour }) {
           }
         })
         const data = await response.json()
+    }
     };
 
     const title = 'Client-Server Interaction: How does the server-side handle queries from the client?'

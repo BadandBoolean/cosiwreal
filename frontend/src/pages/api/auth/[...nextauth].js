@@ -6,6 +6,7 @@ import prisma from "../../../../lib/prisma"
 
 const options = {
     adapter: PrismaAdapter(prisma),
+    secret: process.env.SECRET,
     providers: [
         GitHubProvider({
             clientId: process.env.GITHUB_ID,

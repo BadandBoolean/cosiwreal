@@ -56,136 +56,132 @@ export default function HomePage({userDetails}) {
   }
 
 
-  return (
-    <>
-      <Score score={(!!userDetails) ? (userDetails.score) : (0)} />
-      <div className={styles.introStyle}>
-        {(status === "authenticated") && <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px', marginBottom: '0px' }}>
-          Welcome back, {session.user.name ?? session.user.email}
-        </p></div>}
-        {(status === "unauthenticated") && <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px', marginBottom: '0px' }}>
-          Welcome, Stranger.
-        </p></div>} 
-        <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px', marginBottom: '0px' }}>
-          
-          Select a course to learn more about how a website works.
-          
-          
-        </p>
-        </div>
-        {(status === "unauthenticated") && <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px' }}>
-          Log in to save your progress.
-        </p></div>} 
+  return (<>
+    <Score score={(!!userDetails) ? (userDetails.score) : (0)} />
+    <div className={styles.introStyle}>
+      {(status === "authenticated") && <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px', marginBottom: '0px' }}>
+        Welcome back, {session.user.name ?? session.user.email}
+      </p></div>}
+      {(status === "unauthenticated") && <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px', marginBottom: '0px' }}>
+        Welcome, Stranger.
+      </p></div>} 
+      <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px', marginBottom: '0px' }}>
+        
+        Select a course to learn more about how a website works.
+        
+        
+      </p>
       </div>
-      <div style={{display: 'flex', justifyContent: 'center'}}>
-      <div className={styles.containerWrapper}>
-        <div className={styles.containerStyle}>
-          <motion.div 
-          className={styles.blockBasic} 
-          style={{background: (status === "authenticated") ? (userDetails.progOne) : ('#E47A77') }}
-          variants={oneVar}
-          whileHover="hover"
-          initial="hidden"
-          animate="final"
-          > 
-            <Link href="/courseOne">
-            <div onClick={() => {updateProgress(1)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
-            <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>ONE
-            <br />
-            <br />
-            Client and Server - what are they?</p>
-            </div>
-            </Link>
-          </motion.div>
+      {(status === "unauthenticated") && <div style={{display: 'flex', justifyContent: 'center'}}><p style={{width: '70%', color: '#169873', fontWeight: '700', fontSize: '20px' }}>
+        Log in to save your progress.
+      </p></div>} 
+    </div>
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+    <div className={styles.containerWrapper}>
+      <div className={styles.containerStyle}>
+        <motion.div 
+        className={styles.blockBasic} 
+        style={{background: (status === "authenticated") ? (userDetails.progOne) : ('#E47A77') }}
+        variants={oneVar}
+        whileHover="hover"
+        initial="hidden"
+        animate="final"
+        > 
+          <Link href="/courseOne" legacyBehavior>
+          <div onClick={() => {updateProgress(1)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
+          <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>ONE
+          <br />
+          <br />
+          Client and Server - what are they?</p>
+          </div>
+          </Link>
+        </motion.div>
 
-          <motion.div 
-          className={styles.blockBasic} 
-          style={{background: (status === "authenticated") ? (userDetails.progTwo) : ('#E47A77')}}
-          variants={oneVar}
-          whileHover="hover"
-          initial="hidden"
-          animate="final"
-          > 
-            <Link href="/courseTwo">
-            <div onClick={() => {updateProgress(2)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
-            <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>TWO
-            <br />
-            <br />
-            Interactions between Client and Server</p>
-            </div>
-            </Link>
-          </motion.div>
+        <motion.div 
+        className={styles.blockBasic} 
+        style={{background: (status === "authenticated") ? (userDetails.progTwo) : ('#E47A77')}}
+        variants={oneVar}
+        whileHover="hover"
+        initial="hidden"
+        animate="final"
+        > 
+          <Link href="/courseTwo" legacyBehavior>
+          <div onClick={() => {updateProgress(2)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
+          <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>TWO
+          <br />
+          <br />
+          Interactions between Client and Server</p>
+          </div>
+          </Link>
+        </motion.div>
 
-          <motion.div 
-          className={styles.blockBasic} 
-          style={{background: (status === "authenticated") ? (userDetails.progThree) : ('#E47A77')}}
-          variants={oneVar}
-          whileHover="hover"
-          initial="hidden"
-          animate="final"
-          > 
-            <Link href="/courseThree">
-            <div onClick={() => {updateProgress(3)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
-            <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>THREE
-            <br />
-            <br />
-            In detail: Req, res on the serverside</p>
-            </div>
-            </Link>
-          </motion.div>
+        <motion.div 
+        className={styles.blockBasic} 
+        style={{background: (status === "authenticated") ? (userDetails.progThree) : ('#E47A77')}}
+        variants={oneVar}
+        whileHover="hover"
+        initial="hidden"
+        animate="final"
+        > 
+          <Link href="/courseThree" legacyBehavior>
+          <div onClick={() => {updateProgress(3)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
+          <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>THREE
+          <br />
+          <br />
+          In detail: Req, res on the serverside</p>
+          </div>
+          </Link>
+        </motion.div>
 
-          <motion.div 
-          className={styles.blockBasic} 
-          style={{background: (status === "authenticated") ? (userDetails.progFour) : ('#E47A77')}}
-          variants={oneVar}
-          whileHover="hover"
-          initial="hidden"
-          animate="final"
-          > 
-            <Link href="/courseTwo">
-            <div onClick={() => {updateProgress(4)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
-            <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>FOUR
-            <br />
-            <br />
-            Client-side rendering</p>
-            </div>
-            </Link>
-          </motion.div>
+        <motion.div 
+        className={styles.blockBasic} 
+        style={{background: (status === "authenticated") ? (userDetails.progFour) : ('#E47A77')}}
+        variants={oneVar}
+        whileHover="hover"
+        initial="hidden"
+        animate="final"
+        > 
+          <Link href="/courseTwo" legacyBehavior>
+          <div onClick={() => {updateProgress(4)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
+          <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>FOUR
+          <br />
+          <br />
+          Client-side rendering</p>
+          </div>
+          </Link>
+        </motion.div>
 
-          <motion.div 
-          className={styles.blockBasic} 
-          style={{background: (status === "authenticated") ? (userDetails.progFive) : ('#E47A77')}}
-          variants={oneVar}
-          whileHover="hover"
-          initial="hidden"
-          animate="final"
-          > 
-            <Link href="/courseTwo">
-            <div onClick={() => {updateProgress(5)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
-            <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>FIVE
-            <br />
-            <br />
-            Working with databases and dynamic content</p>
-            </div>
-            </Link>
-          </motion.div>
-
-
-
-
-
-        </div>
+        <motion.div 
+        className={styles.blockBasic} 
+        style={{background: (status === "authenticated") ? (userDetails.progFive) : ('#E47A77')}}
+        variants={oneVar}
+        whileHover="hover"
+        initial="hidden"
+        animate="final"
+        > 
+          <Link href="/courseTwo" legacyBehavior>
+          <div onClick={() => {updateProgress(5)}} style={{display: 'flex', justifyContent: 'center', textDecoration: 'none'}}>
+          <p style={{display: 'flex', textAlign: 'center', fontWeight: '700', fontSize: '20px'}}>FIVE
+          <br />
+          <br />
+          Working with databases and dynamic content</p>
+          </div>
+          </Link>
+        </motion.div>
 
 
 
 
 
       </div>
-      </div>
 
-      
-    </>
-  );
+
+
+
+
+    </div>
+    </div>
+  </>);
 
 }
 

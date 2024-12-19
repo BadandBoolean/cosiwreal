@@ -1,5 +1,5 @@
 import type { OAuthConfig, OAuthUserConfig } from ".";
-interface AtlassianProfile {
+interface AtlassianProfile extends Record<string, any> {
     account_id: string;
     name: string;
     email: string;
@@ -7,3 +7,4 @@ interface AtlassianProfile {
 }
 export default function Atlassian<P extends AtlassianProfile>(options: OAuthUserConfig<P>): OAuthConfig<P>;
 export {};
+//# sourceMappingURL=atlassian.d.ts.map

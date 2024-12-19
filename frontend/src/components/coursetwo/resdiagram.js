@@ -34,10 +34,9 @@ export default function ResDiagram({toggleMidway}) {
     const [card3Turned, toggleCard3] = useState(false);
 
     return (
-        <div className={styles.sectionBody}>
+        (<div className={styles.sectionBody}>
             <div style={{display: 'flex', justifyContent: 'center'}}><p >When a request is made to the server, the server sends back a response.<br />
             <b>Click the elements below to find out more about them</b></p></div>
-
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 <div style={{flexBasis: '20%', justifyContent: 'center', display: 'flex', padding: '20px'}}>
                 <motion.div
@@ -91,7 +90,6 @@ export default function ResDiagram({toggleMidway}) {
                 </motion.div>
                 </div>
             </div>
-
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
             <div style={{display: 'flex', flexBasis: '80%', justifyContent: 'center'}}>
                 <div style={{display: 'flex', flexBasis: '50%', justifyContent: 'center', alignContent: 'center', flexDirection: 'column'}}>
@@ -105,26 +103,16 @@ export default function ResDiagram({toggleMidway}) {
 
             </div>
             </div>
-
-
-
-
-
-
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
                 <div style={{display: 'flex', flexBasis: '60%', justifyContent: 'space-between'}}>
                     <div
                     style={{cursor: 'pointer', position: 'relative'}}><p onClick={() => {
                         toggleMidway(true)  
                       }} className={styles.underlineanim}  >back</p></div>
-                    <div style={{cursor: 'pointer', position: 'relative'}}><p className={styles.underlineanim}><Link href='/courseTwo/QuizTwoA'><p style={{textDecoration: 'none'}}>go to quiz</p></Link></p></div>
+                    <div style={{cursor: 'pointer', position: 'relative'}}><p className={styles.underlineanim}><Link href='/courseTwo/QuizTwoA' legacyBehavior><p style={{textDecoration: 'none'}}>go to quiz</p></Link></p></div>
                 </div>
 
             </div>
-
-
-
-        </div>
-
+        </div>)
     );
 }

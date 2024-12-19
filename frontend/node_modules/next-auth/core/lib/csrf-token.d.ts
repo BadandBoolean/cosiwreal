@@ -1,4 +1,4 @@
-import { InternalOptions } from "../../lib/types";
+import type { InternalOptions } from "../types";
 interface CreateCSRFTokenParams {
     options: InternalOptions;
     cookieValue?: string;
@@ -29,3 +29,4 @@ export declare function createCSRFToken({ options, cookieValue, isPost, bodyValu
     csrfTokenVerified?: undefined;
 };
 export {};
+//# sourceMappingURL=csrf-token.d.ts.map

@@ -100,18 +100,16 @@ export default function ServerDiagram({ togglePair }) {
     const [purpleClicked, setPurpleClicked] = useState(false);
 
     return (
-        <div style={{height: '80vh', position: 'relative'}}>
+        (<div style={{height: '80vh', position: 'relative'}}>
             <div style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
                 <div style={{display: 'flex', flexBasis: '60%', justifyContent: 'space-between'}}>
                     <div onClick={() => {
                         togglePair(true)  
                       }} style={{cursor: 'pointer'}}><p className={styles.underlineanim}>back</p></div>
-                    <div style={{cursor: 'pointer'}}><Link href='/courseOne/QuizOneA' ><p className={styles.underlineanim}>Take the quiz</p></Link></div>
+                    <div style={{cursor: 'pointer'}}><Link href='/courseOne/QuizOneA' legacyBehavior><p className={styles.underlineanim}>Take the quiz</p></Link></div>
                 </div>
 
             </div>
-
-
             <motion.div initial="initial" whileHover="hover" className={styles.standard}>
                 <motion.div
                     variants={glowVariants}
@@ -207,6 +205,6 @@ export default function ServerDiagram({ togglePair }) {
 
 
             </motion.div>
-        </div>
+        </div>)
     );
 }

@@ -1,4 +1,4 @@
-import { InternalOptions } from "../../lib/types";
+import type { InternalOptions } from "../types";
 interface CreateCallbackUrlParams {
     options: InternalOptions;
     /** Try reading value from request body (POST) then from query param (GET) */
@@ -14,3 +14,4 @@ export declare function createCallbackUrl({ options, paramValue, cookieValue, }:
     callbackUrlCookie: string | undefined;
 }>;
 export {};
+//# sourceMappingURL=callback-url.d.ts.map

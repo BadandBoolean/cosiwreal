@@ -1,11 +1,11 @@
 import type { OAuthConfig, OAuthUserConfig } from ".";
-export interface AzureADProfile {
+export interface AzureADProfile extends Record<string, any> {
     sub: string;
-    nicname: string;
+    nickname: string;
     email: string;
     picture: string;
 }
-export default function AzureAD<P extends Record<string, any> = AzureADProfile>(options: OAuthUserConfig<P> & {
+export default function AzureAD<P extends AzureADProfile>(options: OAuthUserConfig<P> & {
     /**
      * https://docs.microsoft.com/en-us/graph/api/profilephoto-get?view=graph-rest-1.0#examples
      * @default 48
@@ -14,3 +14,4 @@ export default function AzureAD<P extends Record<string, any> = AzureADProfile>(
     /** @default "common" */
     tenantId?: string;
 }): OAuthConfig<P>;
+//# sourceMappingURL=azure-ad.d.ts.map

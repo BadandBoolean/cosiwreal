@@ -18,10 +18,10 @@ function NavBar() {
 
 
     return (
-        <div className={styles.NavWrapper}>
+        (<div className={styles.NavWrapper}>
             <div className={styles.Nav}>
                 <div className={styles.NavButton} style={{ flexBasis: '50%', textDecoration: 'none' }}>
-                    <Link href='/'><p style={{textDecoration: 'none', color: '#3D1FFF'}}>Frontend to Backend</p></Link>
+                    <Link href='/' legacyBehavior><p style={{textDecoration: 'none', color: '#3D1FFF'}}>Frontend to Backend</p></Link>
                 </div>
                 <div className={styles.NavButton} style={{color: '#3D1FFF'}}>
                     About
@@ -44,8 +44,8 @@ function NavBar() {
                     
                 </div>
             </div>
-        </div>
-    )
+        </div>)
+    );
 }
 
 export default NavBar;

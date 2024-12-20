@@ -70,7 +70,7 @@ export default function courseThree() {
   const constraintsRef = useRef(null);
 
   return (
-    <div className={pagestyles.page}>
+    <div className={pagestyles.activityPage}>
       <NavBar />
       <div>
         <Title text={title} />

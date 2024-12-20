@@ -263,7 +263,7 @@ export default function HomePage({ userDetails }) {
                   initial="hidden"
                   animate="final"
                 >
-                  <Link href="/courseTwo" legacyBehavior>
+                  <Link href="/" legacyBehavior>
                     <div
                       onClick={() => {
                         updateProgress(4);
@@ -285,7 +285,7 @@ export default function HomePage({ userDetails }) {
                         FOUR
                         <br />
                         <br />
-                        Client-side rendering
+                        Client-side rendering - coming soon!
                       </p>
                     </div>
                   </Link>
@@ -304,7 +304,7 @@ export default function HomePage({ userDetails }) {
                   initial="hidden"
                   animate="final"
                 >
-                  <Link href="/courseTwo" legacyBehavior>
+                  <Link href="/" legacyBehavior>
                     <div
                       onClick={() => {
                         updateProgress(5);
@@ -326,7 +326,8 @@ export default function HomePage({ userDetails }) {
                         FIVE
                         <br />
                         <br />
-                        Working with databases and dynamic content
+                        Working with databases and dynamic content - coming
+                        soon!
                       </p>
                     </div>
                   </Link>

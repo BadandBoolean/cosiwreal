@@ -86,7 +86,7 @@ export default function Listening({toggleProcessInfo}) {
                 </motion.div>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', flexBasis: '33%', marginLeft: '10px', flexDirection: 'column'}}>
-                <div>When the server receives a request on the port from the client, it begins to process it. </div>
+                <div style={{backdropFilter: 'blur(14px)'}}>When the server receives a request on the port from the client, it begins to process it. </div>
                 <div style={{flexBasis: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center'}} >
                 <motion.div
                 variants={processVar}

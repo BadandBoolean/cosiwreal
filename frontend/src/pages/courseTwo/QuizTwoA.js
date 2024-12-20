@@ -5,6 +5,9 @@ import RightAnswerMessage from '../../components/rightanswermessage'
 import WrongAnswerMessage from '../../components/wronganswermessage'
 import Link from 'next/link';
 import { useSession } from 'next-auth/react'
+import NavBar from '../../components/NavBar';
+import Footer from '../../components/footer';
+import homestyles from "../../styles/home.module.css"
 
 export default function QuizTwoA({ makeUpdateScore }) {
 
@@ -47,7 +50,8 @@ export default function QuizTwoA({ makeUpdateScore }) {
     const title = 'Client-Server Interaction: how do they communicate?'
     const rightMessage = "The three components of a response sent by the server to the client are the status line, indicating the health of the request, the HTTP Headers containing metadata about the response, and the Message Body, which contains the returned resource itself"
 
-    return (<>
+    return (<div className={homestyles.activityPage}>
+      <NavBar />
         <Title text={title} />
         <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
 
@@ -92,5 +96,6 @@ export default function QuizTwoA({ makeUpdateScore }) {
             
         </div>
         {(answerResult == "correct") && <div style={{width: '100%', display: 'flex', justifyContent: 'center', margin: '10px', padding: '0px'}}><div style={{cursor: 'pointer', position: 'relative'}}><p className={styles.underlineanim}><Link href='/courseTwo/QuizTwoB' legacyBehavior><p style={{textDecoration: 'none'}}>Next Question</p></Link></p></div></div>}
-    </>);
+        <Footer />
+    </div>);
 }

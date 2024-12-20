@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styles from '../../styles/reqdiagram.module.css'
+import homestyles from '../../styles/home.module.css'
 import { useState } from 'react';
 import { VscTriangleRight, VscTriangleLeft } from "react-icons/vsc";
 
@@ -198,6 +199,7 @@ export default function ReqDiagram({toggleMidway}) {
     }
     
     return (
+        
         <div className={styles.sectionBody}>
             <div style={{display: 'flex', justifyContent: 'center'}}><p>In order for the client (your browser) to display a web page, it sends a HTTP request to the server.</p></div>
 
@@ -393,6 +395,7 @@ export default function ReqDiagram({toggleMidway}) {
 
 
         </div>
+        
 
     );
 }

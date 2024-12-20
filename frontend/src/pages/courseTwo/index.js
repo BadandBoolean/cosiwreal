@@ -5,7 +5,6 @@ import ResDiagram from "../../components/coursetwo/resdiagram.js";
 import { useState } from "react";
 import Footer from "../../components/footer.js";
 import NavBar from "../../components/NavBar";
-
 import pagestyles from "../../styles/home.module.css";
 
 export default function courseTwo() {
@@ -42,8 +41,14 @@ export default function courseTwo() {
   const [reqOpen, showReqOpen] = useState(false);
   const [resOpen, showResOpen] = useState(false);
 
+  const isreqresopen = reqOpen || resOpen;
+
   return (
-    <div className={pagestyles.page}>
+    <div
+      className={
+        isreqresopen ? pagestyles.emptyBackground : pagestyles.activityPage
+      }
+    >
       <NavBar />
       <div>
         <Title text={title} />

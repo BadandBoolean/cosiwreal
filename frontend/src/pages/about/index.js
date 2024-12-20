@@ -16,15 +16,13 @@ export default function About() {
               <a className={styles.textTitle}>About</a>
               <div className={styles.textBox}>
                 <p style={{ whiteSpace: "pre-wrap", textAlign: "center" }}>
-                  <b>Frontend to Backend</b> is a modern learning tool with the
-                  aim of revolutionizing how concepts of client-server
-                  architecture and full-stack web service interactions are
-                  taught to developers. It takes key lessons from web
-                  architecture and networking classes taught in computer science
-                  departments around the world, as well as design write-ups from
-                  open-source documentation, and teaches them using an engaging,
-                  interactive format. The lessons are taught with a focus on
-                  keeping the student attentive and engaged with the material.
+                  <i>Frontend to Backend</i> is an interactive learning platform
+                  designed to transform how developers understand and apply
+                  client-server architecture and full-stack web service
+                  principles. Drawing on foundational concepts taught in
+                  computer science programs around the globe, as well as
+                  insights from open-source documentation, it presents lessons
+                  on web development in a dynamic, highly engaging format.
                   <br />
                   <br />A key step toward enabling interactivity in this project
                   is the implementation and adaptation of several open-source
@@ -42,11 +40,16 @@ export default function About() {
                   >
                     React-Spring
                   </Link>
-                  , a spring physics-based animation library. Frontend to
-                  Backend utilizes react animated components and adapts
-                  animation hooks from these libraries, in order to deliver rich
-                  and engaging content which is memorable and educational to the
-                  user.
+                  , a spring physics-based animation library.{" "}
+                  <i>Frontend to Backend</i> utilizes animated React components
+                  and adapts animation hooks from these libraries, in order to
+                  deliver rich and engaging content. As a result, the platform
+                  elevates static concepts into vivid, memorable experiences,
+                  fostering visual clarity and encouraging understanding and
+                  retention of the concepts. By exploring the presentation of
+                  this information through a dynamic medium built on the web,
+                  complex ideas about web architecture and process become not
+                  only more accessible, but also more enjoyable to explore.
                   <br />
                   <br />
                   ***
@@ -66,7 +69,6 @@ export default function About() {
                   requirements for Degree of Bachelor of Science in Engineering
                   (B.S.E.) in Computer Science at Princeton University.
                   <br />
-
                   <a
                     className={styles.courseLink}
                     href="/Ismagilova_IW_COS497.pdf"
@@ -74,10 +76,9 @@ export default function About() {
                     alt="Ismagilova thesis"
                     rel="noopener noreferrer"
                   >
-                    Project Write-up
+                    Project write-up{" "}
                   </a>
                   |
-
                   <a
                     className={styles.courseLink}
                     href="https://github.com/aliyaismagilova/frontend-to-backend"
@@ -85,6 +86,7 @@ export default function About() {
                     alt="Ismagilova github"
                     rel="noopener noreferrer"
                   >
+                    {" "}
                     Project source code
                   </a>
                   <br />

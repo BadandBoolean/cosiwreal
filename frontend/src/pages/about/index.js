@@ -62,7 +62,7 @@ export default function About() {
                   requirements for Degree of Bachelor of Science in Engineering
                   (B.S.E.) in Computer Science at Princeton University.
                   <br />
-                  The full paper for the project can be found{" "}
+
                   <a
                     className={styles.courseLink}
                     href="/Ismagilova_IW_COS497.pdf"
@@ -70,9 +70,19 @@ export default function About() {
                     alt="Ismagilova thesis"
                     rel="noopener noreferrer"
                   >
-                    here
+                    Project Write-up
                   </a>
-                  .
+                  |
+
+                  <a
+                    className={styles.courseLink}
+                    href="https://github.com/aliyaismagilova/frontend-to-backend"
+                    target="_blank"
+                    alt="Ismagilova github"
+                    rel="noopener noreferrer"
+                  >
+                    Project source code
+                  </a>
                   <br />
                   <br />
                   ***

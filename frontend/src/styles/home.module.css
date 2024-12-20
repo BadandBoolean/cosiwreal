@@ -3,8 +3,13 @@
   justify-content: center;
   width: 100%;
   margin: 50px;
-  position: relative;
-  overflow: hidden;
+}
+
+.blockWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .containerStyle {
@@ -31,4 +36,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+
+.footerLinkedinLink {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.footerLinkedinLink:hover {
+  color: black !important;
+  text-shadow: -2px -2px #02fefe, 2px 2px #fe02e9 !important;
 }

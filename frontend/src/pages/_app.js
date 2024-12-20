@@ -19,20 +19,12 @@ function MyApp({ Component, pageProps }) {
     // TODO: will have to push this to Prisma so database can also be updated with their score
   };
 
-  const page = {
-    display: "flex",
-    flexDirection: "column",
-    height: "100vh",
-    width: "100%",
-    backgroundColor: "white",
-  };
-
   return (
-    <div style={page}>
+    <div>
       <SessionProvider session={pageProps.session}>
-        <NavBar />
+        
         <Component {...pageProps} />
-        <Footer />
+        
       </SessionProvider>
     </div>
   );

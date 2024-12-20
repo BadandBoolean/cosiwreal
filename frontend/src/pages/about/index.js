@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "../../styles/about.module.css";
+import homestyles from "../../styles/home.module.css";
 import Link from "next/link";
+import Footer from "../../components/footer";
+import NavBar from "../../components/NavBar";
 
 export default function About() {
   return (
-    <div className={styles.pageWrapper}>
+    <div className={homestyles.page}>
+      <NavBar />
       <div className={styles.textDivWrapper}>
         <div className={styles.textOuterDivBox}>
           <div className={styles.textDivBox}>
@@ -97,6 +101,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

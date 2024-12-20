@@ -1,20 +1,10 @@
 import Link from "next/link";
 import styles from "../styles/home.module.css";
 export default function Footer() {
-  const wrapperStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    height: "20vh",
-    justifyContent: "center",
-    background: "#3D1FFF",
-    color: "white",
-  };
-
-  
   return (
-    <div style={wrapperStyle}>
-      <div style={{ font: "italic 15px", textDecoration: "none" }}>
+    <div className={styles.footerWrapper}>
+      <div className={styles.footerStyle}>
+      <div style={{ font: "italic 15px", textDecoration: "none", color: "white" }}>
         Created by{" "}
         <Link
           className={styles.footerLinkedinLink}
@@ -25,5 +15,7 @@ export default function Footer() {
         '22 for COS 497: Senior Independent Work
       </div>
     </div>
+    </div>
+
   );
 }

@@ -15,7 +15,9 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background-color: white;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 450"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="10" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="114" ry="110" cx="221.63413705875735" cy="600.2884692446723" fill="hsl(37, 99%, 67%)"></ellipse><ellipse rx="114" ry="110" cx="649.6102100719105" cy="268.7435580166903" fill="hsl(316, 73%, 52%)"></ellipse><ellipse rx="114" ry="110" cx="238.99591203169393" cy="104.43330938165843" fill="hsl(185, 100%, 57%)"></ellipse><ellipse rx="114" ry="110" cx="271.126825506037" cy="427.51797901500356" fill="hsl(54, 100%, 82%)"></ellipse></g></svg>');
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
 }
 
 * {

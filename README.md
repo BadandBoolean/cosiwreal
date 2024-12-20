@@ -1,6 +1,6 @@
 # Frontend to Backend: Learn Full-Stack Web Development
 
-Frontend to Backend is a modern learning tool designed to
+Frontend to Backend is an online learning tool designed to
 modernize the teaching of client-server architecture and
 interactions, as well as full-stack web service processes. It combines lessons from
 web architecture and networking classes with design concepts
